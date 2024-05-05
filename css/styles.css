@@ -28,7 +28,7 @@ button {
 
 main {
     padding: 20px;
-    background: url('path_to_your_background.jpg') no-repeat center center;
+    background: url('resources/art1.png') no-repeat center center;
     background-size: cover;
     color: #fff;
     min-height: 100vh;

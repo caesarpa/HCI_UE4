@@ -18,9 +18,7 @@ function doDrag(e) {
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - clientX;
     const maxDelta = window.innerWidth / 2;
-
-    // Adjust the percentage calculation to make the scrolling half as fast
-    const percentage = (mouseDelta / maxDelta) * -50;  // Reduce the effect by half
+    const percentage = (mouseDelta / maxDelta) * -50;
     let nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
     // Enforce bounds for translation
@@ -29,12 +27,11 @@ function doDrag(e) {
     track.dataset.percentage = nextPercentage;
 
     // Directly update transform property for immediate feedback
-    track.style.transform = `translate(${nextPercentage}%, -40%)`;
+    track.style.transform = `translate(${nextPercentage}%, -50%)`;
     for (const image of track.getElementsByClassName("image")) {
         image.style.objectPosition = `${100 + nextPercentage}% center`;
     }
 }
-
 
 // Event listeners for mouse
 window.addEventListener('mousedown', startDrag);
