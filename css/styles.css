@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #262727;
+    background-color: #2a2a2b;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -30,7 +30,7 @@ main {
     padding: 20px;
     background: url('art1.png') no-repeat center center;
     background-size: cover;
-    background-color: #000;
+    background-color: #000000;
     color: #000000;
     min-height: 100vh;
 }
@@ -88,4 +88,31 @@ p {
 .view-button {
     margin-left: 0px;
     padding-left: 0px;
+}
+
+.drawer {
+    height: 100%;
+    width: 0; /* Drawer is hidden initially */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s; /* Smooth transition for opening and closing */
+    padding-top: 60px;
+    color: white;
+}
+
+.drawer a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.drawer a:hover {
+    color: #f1f1f1;
 }
