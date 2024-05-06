@@ -1,7 +1,9 @@
 const track = document.getElementById("image-track");
 
 function startDrag(e) {
-    e.preventDefault();  // Consistently prevent default to ensure touch tracking is smooth
+    if (e.target.tagName !== 'BUTTON') {
+        e.preventDefault();
+    }
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     track.dataset.mouseDownAt = clientX;
 }
@@ -14,7 +16,6 @@ function endDrag() {
 function doDrag(e) {
     if (track.dataset.mouseDownAt === "0") return;
 
-    e.preventDefault();  // Prevent default behavior during drag to avoid scrolling interference
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - clientX;
     const maxDelta = window.innerWidth / 2;
@@ -22,7 +23,7 @@ function doDrag(e) {
     let nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
     // Enforce bounds for translation
-    nextPercentage = Math.max(-100, Math.min(0, nextPercentage));
+    nextPercentage = Math.max(-90.5, Math.min(-9.5, nextPercentage));
 
     track.dataset.percentage = nextPercentage;
 

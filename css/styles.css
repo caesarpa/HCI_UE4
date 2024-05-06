@@ -10,13 +10,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #262727;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h1 {
     font-size: 24px;
-    color: #333;
+    color: #ffffff;
 }
 
 button {
@@ -28,9 +28,10 @@ button {
 
 main {
     padding: 20px;
-    background: url('resources/art1.png') no-repeat center center;
+    background: url('art1.png') no-repeat center center;
     background-size: cover;
-    color: #fff;
+    background-color: #000;
+    color: #000000;
     min-height: 100vh;
 }
 
@@ -41,35 +42,36 @@ main {
 }
 
 article {
-    background-color: rgba(255, 255, 255, 0.5);
+
     margin-top: 20px;
     padding: 20px;
     border-radius: 8px;
-    color: #000;
+    color: #ffffff;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #300331;
+    color: #a7ffff;
 }
+
 
 h2 {
     font-size: 15px;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 3px;
 }
 
 h3 {
     font-size: 25px;
-    color: #333;
+    color: #ffffff;
     margin-top: 0px;
     margin-bottom: 10px;
 }
 
 .menu-button {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .demo-img{
@@ -81,4 +83,9 @@ h3 {
 p {
     font-weight: bold;
     margin-top: 0px;
+}
+
+.view-button {
+    margin-left: 0px;
+    padding-left: 0px;
 }
